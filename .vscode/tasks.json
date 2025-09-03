@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Doc: gerar Word do script atual",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "doc_to_word.py",
+        "--md",
+        "${workspaceFolder}/saida_copilot.md",
+        "--src",
+        "${file}",
+        "--template",
+        "${workspaceFolder}/template.docx",
+        "--out",
+        "${workspaceFolder}/docs/${fileBasenameNoExtension}.docx"
+      ],
+      "problemMatcher": [],
+      "group": "build"
+    }
+  ]
+}
